@@ -1,0 +1,1010 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>План проекта «Парные Интернет-лампы»</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+<style>
+:root{
+  --bg:#f6f7f9; --card:#ffffff; --card2:#fbfbfd; --text:#1a1d23; --sub:#5b6270; --border:#e3e6eb;
+  --accent:#2563eb; --chip-bg:#eef1f5; --chip-text:#333; --done-bg:#eafaf0; --danger:#dc2626;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14161a; --card:#1d2026; --card2:#20232a; --text:#eef0f3; --sub:#9aa2b1; --border:#2c313a;
+    --accent:#5b9bff; --chip-bg:#262a32; --chip-text:#dfe3ea; --done-bg:#123321;
+  }
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding-bottom:60px;}
+header{position:sticky;top:0;z-index:30;background:var(--bg);padding:14px 14px 10px;border-bottom:1px solid var(--border);}
+h1{font-size:17px;margin:0 0 4px;}
+.subtitle{font-size:12px;color:var(--sub);margin-bottom:8px;}
+.generated-at{font-size:11px;color:var(--sub);margin-top:6px;}
+.progress-row{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);}
+.progress-bar{flex:1;height:8px;background:var(--chip-bg);border-radius:5px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);border-radius:5px;}
+.board{padding:12px 14px;max-width:720px;margin:0 auto;}
+.bigtask{background:var(--card);border:1px solid var(--border);border-left:5px solid var(--bt-color,var(--border));border-radius:14px;margin-bottom:16px;overflow:hidden;}
+.bt-head{display:flex;align-items:flex-start;gap:6px;padding:12px 12px 8px;}
+.bt-titlewrap{flex:1;min-width:0;}
+.bt-title{font-weight:700;font-size:15px;line-height:1.35;}
+.bt-meta{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--sub);margin-top:4px;flex-wrap:wrap;}
+.bt-progress{flex:1;height:6px;background:var(--chip-bg);border-radius:4px;overflow:hidden;min-width:50px;max-width:120px;}
+.bt-progress-fill{height:100%;background:var(--bt-color,var(--accent));border-radius:4px;}
+.bt-body{padding:0 12px 12px;}
+.bt-desc{font-size:12.5px;color:var(--sub);padding:4px 0;}
+.subtasks{margin-top:10px;padding:8px;border-radius:10px;background:var(--card2);}
+.subtask{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--bt-color,var(--border));border-radius:10px;padding:8px 10px;margin-bottom:7px;}
+.subtask.done{opacity:.6;background:var(--done-bg);}
+.st-top{display:flex;align-items:flex-start;gap:7px;}
+.st-check{width:16px;height:16px;margin-top:3px;flex:0 0 auto;font-size:14px;line-height:1;}
+.st-title{font-weight:600;font-size:13px;line-height:1.35;}
+.st-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px;font-size:10.5px;color:var(--sub);}
+.chip{font-size:10.5px;padding:3px 9px;border-radius:10px;background:var(--chip-bg);color:var(--chip-text);display:inline-flex;align-items:center;gap:4px;white-space:nowrap;}
+.comments{margin-top:10px;border-top:1px dashed var(--border);padding-top:8px;}
+.comment{background:var(--card2);border-radius:9px;padding:7px 9px;margin-bottom:6px;font-size:12px;}
+.comment-meta{font-size:10px;color:var(--sub);margin-bottom:3px;}
+.comment img{max-width:100%;border-radius:8px;margin-top:5px;display:block;}
+footer{padding:14px;font-size:11px;color:var(--sub);text-align:center;}
+.empty{font-size:12px;color:var(--sub);padding:10px 0;text-align:center;}
+.collapse-btn{cursor:pointer;background:none;border:none;color:var(--sub);font-size:14px;padding:2px 4px;}
+.bigtask.collapsed .bt-body{display:none;}
+</style>
+</head>
+<body>
+<header>
+  <h1>💡 План проекта «Парные Интернет-лампы»</h1>
+  <div class="subtitle">Б25-615 · Макарова Д., Альрави Р., Попов К., Новиков А.</div>
+  <div class="progress-row">
+    <span>1%</span>
+    <div class="progress-bar"><div class="progress-fill" style="width:1%"></div></div>
+    <span>1/72</span>
+  </div>
+  <div class="generated-at">Снимок данных: 22.09.2026 20:32 (МСК)</div>
+</header>
+
+<div class="board">
+
+    <div class="bigtask" style="--bt-color:#d97706">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Подготовить корпус лампы</div>
+          <div class="bt-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span><div class="bt-progress"><div class="bt-progress-fill" style="width:14%"></div></div><span>1/7</span><span class="chip">👤 Дарья, Рауль, Кирилл, Алексей</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        <div class="bt-desc">Варианты: 3D-печать или готовый вариант</div>
+        
+        <div class="subtasks">
+    <div class="subtask done" style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">✅</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Решить: печатать свой корпус или переделать готовую лампу</div>
+          <div class="bt-desc">Решено: печатать</div>
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span><span class="chip">📅 2026-09-18</span><span class="chip">👤 Дарья, Рауль, Кирилл, Алексей</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Тестовая печать на Ghost 6</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Сделать эскиз компоновки</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">3D-модель корпуса</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Тестовая печать корпуса, проверка посадки компонентов</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Доработка корпуса по итогам тестов</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Печать финального корпуса (итого: 2 шт)</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#9333ea">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Изучить и подобрать компоненты</div>
+          <div class="bt-meta"><span class="chip" style="background:#9333ea;color:#fff">поиск информации</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/2</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#2563eb">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Подобрать компоненты</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Подобрать материалы для печати</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#d97706">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Подготовить крышку лампы</div>
+          <div class="bt-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/5</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        <div class="bt-desc">Обеспечить равномерное рассеивание света от адресной светодиодной ленты</div>
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Решить: материал крышки лампы</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">3D-модель крышки-рассеивателя света</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Тестовая печать крышки, проверка рассеивания света</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Доработка, изменение планов</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Печать финальной крышки (итого: 2 шт)</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#64748b">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Закупка компонентов и материалов</div>
+          <div class="bt-meta"><span class="chip" style="background:#64748b;color:#fff">другое</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/3</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Определить нужные компоненты и материалы</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#64748b">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Заказать материалы и компоненты</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#64748b;color:#fff">другое</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#64748b">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Проверить и дозаказать компоненты на случай брака</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#64748b;color:#fff">другое</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#d97706">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Полностью собрать две лампы</div>
+          <div class="bt-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/2</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Финальная сборка корпуса и крышки для обеих ламп</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#dc2626">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Лампы полностью собраны</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#2563eb">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Разработать электрическую схему подключения</div>
+          <div class="bt-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/1</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        <div class="bt-desc">ESP8266 + WS2812B + TTP223 + AM312 + БП 5В.</div>
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#2563eb">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Создать схему</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#2563eb">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Расположение компонентов внутри корпуса и развод проводов</div>
+          <div class="bt-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/2</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#2563eb">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Развод проводов под финальный корпус</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#2563eb">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Сборка электроники лампы</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#2563eb">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Надёжность: устойчивость соединений, защита схемы</div>
+          <div class="bt-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/2</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#2563eb">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Тестирование стабильности соединений, защита от обрыва проводов</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#2563eb">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Известный баг AlexGyver: ложные срабатывания сенсорной кнопки — заменить металлическую наклейку или впаять конденсатор</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#16a34a">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Изучить и запустить прошивку</div>
+          <div class="bt-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/4</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Настроить среду разработки (ядро ESP8266 строго v2.7.4)</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Изучить исходники референсной прошивки на GitHub</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Прошить референсную прошивку «как есть», проверить базовый функционал</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Обе платы синхронизируются в базовом режиме</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#16a34a">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Обработка сигналов кнопки и ИК-датчика движения</div>
+          <div class="bt-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/1</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Адаптировать обработку кнопки и датчика под наши компоненты и распиновку</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#16a34a">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Подключение к Wi-Fi и режим точки доступа</div>
+          <div class="bt-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/1</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Проверить и при необходимости доработать логику подключения к Wi-Fi / AP</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#16a34a">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Обмен данными между лампами через MQTT-брокер</div>
+          <div class="bt-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/3</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Поднять сервер/брокер для пары ламп (MQTT HiveMQ)</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Оптимизация задержки доставки команд между лампами</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Обработка разрывов соединения и переподключение</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#16a34a">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Веб-интерфейс для настройки и статуса</div>
+          <div class="bt-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/2</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Доработать вёрстку и дизайн страницы настройки при необходимости</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Добавить недостающие поля при необходимости</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#16a34a">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Эффекты «подмигивание» и «дыхание»</div>
+          <div class="bt-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/1</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Проверить и настроить параметры эффектов под наши таймауты</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#16a34a">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Сохранение и восстановление состояния лампы</div>
+          <div class="bt-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/1</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Сохранение состояния в энергонезависимой памяти после отключения питания</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#2563eb">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Тесты компонентов и стабильности соединений</div>
+          <div class="bt-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/4</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#2563eb">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Сборка макета на макетной плате, проверка каждого компонента</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Пайка и сборка первого рабочего прототипа</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#2563eb">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Доработка электроники, соединений</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#2563eb">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Нагрузочное тестирование энергопотребления и надёжности</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#2563eb;color:#fff">электроника</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#dc2626">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Обе лампы синхронизируются через Интернет</div>
+          <div class="bt-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        <div class="bt-desc">В референсе только одна жёстко заданная пара без аккаунтов — это наше отличие.</div>
+        
+        <div class="subtasks"><div class="empty">Пока нет подзадач</div></div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#dc2626">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Финальная отладка и тестирование прошивки</div>
+          <div class="bt-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/2</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#16a34a">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Отладка и багфиксинг</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#16a34a;color:#fff">программная</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#dc2626">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Финальное тестирование</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#d97706">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Инструкция пользователя и сценарии использования</div>
+          <div class="bt-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/3</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Черновик инструкции по первичной настройке</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Описание типовых сценариев использования</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#d97706">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Финализация инструкции и сценариев использования</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#d97706;color:#fff">конструкторская</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#9333ea">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Тестирование с реальными пользователями</div>
+          <div class="bt-meta"><span class="chip" style="background:#9333ea;color:#fff">поиск информации</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/3</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#9333ea">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Внутреннее тестирование с одногруппниками/друзьями/семьёй</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#9333ea;color:#fff">поиск информации</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#9333ea">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Сбор обратной связи</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#9333ea;color:#fff">поиск информации</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#dc2626">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Доработка</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+    <div class="bigtask" style="--bt-color:#dc2626">
+      <div class="bt-head">
+        <div class="bt-titlewrap">
+          <div class="bt-title">Итоговый отчёт и защита проекта</div>
+          <div class="bt-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/2</span></div>
+        </div>
+        <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
+      </div>
+      <div class="bt-body">
+        
+        
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#dc2626">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Подготовка финального отчёта</div>
+          <div class="bt-desc">В рамках тестов проверили надёжность...</div>
+          <div class="st-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span></div>
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="subtask " style="--bt-color:#dc2626">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Защита / презентация проекта</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+  
+</div>
+
+<footer>Это статическая версия доски для чтения. Обновляется автоматически каждый день в 06:00 МСК.</footer>
+
+<script>
+document.querySelectorAll('.collapse-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    btn.closest('.bigtask').classList.toggle('collapsed');
+    btn.textContent = btn.closest('.bigtask').classList.contains('collapsed') ? '▸' : '▾';
+  });
+});
+</script>
+</body>
+</html>
