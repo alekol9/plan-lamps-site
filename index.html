@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>План проекта «Парные Интернет-лампы»</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="План проекта «Парные Интернет-лампы» — учебный проект группы Б25-615. Статическая версия доски для чтения.">
+<meta property="og:title" content="План проекта «Парные Интернет-лампы»">
+<meta property="og:description" content="Учебный проект группы Б25-615. Обновляется автоматически каждый день.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2563eb">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
 <style>
 :root{
@@ -46,7 +52,7 @@ h1{font-size:17px;margin:0 0 4px;}
 .comments{margin-top:10px;border-top:1px dashed var(--border);padding-top:8px;}
 .comment{background:var(--card2);border-radius:9px;padding:7px 9px;margin-bottom:6px;font-size:12px;}
 .comment-meta{font-size:10px;color:var(--sub);margin-bottom:3px;}
-.comment img{max-width:100%;border-radius:8px;margin-top:5px;display:block;}
+.comment img{max-width:100%;border-radius:8px;margin-top:5px;display:block;min-height:20px;background:var(--card);}
 footer{padding:14px;font-size:11px;color:var(--sub);text-align:center;}
 .empty{font-size:12px;color:var(--sub);padding:10px 0;text-align:center;}
 .collapse-btn{cursor:pointer;background:none;border:none;color:var(--sub);font-size:14px;padding:2px 4px;}
@@ -62,7 +68,7 @@ footer{padding:14px;font-size:11px;color:var(--sub);text-align:center;}
     <div class="progress-bar"><div class="progress-fill" style="width:1%"></div></div>
     <span>1/72</span>
   </div>
-  <div class="generated-at">Снимок данных: 24.09.2026 04:36 (МСК)</div>
+  <div class="generated-at">Снимок данных: 24.09.2026 20:40 (МСК)</div>
 </header>
 
 <div class="board">
@@ -284,7 +290,7 @@ footer{padding:14px;font-size:11px;color:var(--sub);text-align:center;}
       <div class="bt-head">
         <div class="bt-titlewrap">
           <div class="bt-title">Закупка компонентов и материалов</div>
-          <div class="bt-meta"><span class="chip" style="background:#64748b;color:#fff">другое</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/3</span></div>
+          <div class="bt-meta"><span class="chip" style="background:#64748b;color:#fff">другое</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/2</span></div>
         </div>
         <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
       </div>
@@ -309,18 +315,6 @@ footer{padding:14px;font-size:11px;color:var(--sub);text-align:center;}
         <div class="st-check">⬜</div>
         <div style="flex:1;min-width:0">
           <div class="st-title">Заказать материалы и компоненты</div>
-          
-          <div class="st-meta"><span class="chip" style="background:#64748b;color:#fff">другое</span></div>
-          
-        </div>
-      </div>
-    </div>
-  
-    <div class="subtask " style="--bt-color:#64748b">
-      <div class="st-top">
-        <div class="st-check">⬜</div>
-        <div style="flex:1;min-width:0">
-          <div class="st-title">Проверить и дозаказать компоненты на случай брака</div>
           
           <div class="st-meta"><span class="chip" style="background:#64748b;color:#fff">другое</span></div>
           
@@ -803,14 +797,26 @@ footer{padding:14px;font-size:11px;color:var(--sub);text-align:center;}
       <div class="bt-head">
         <div class="bt-titlewrap">
           <div class="bt-title">Обе лампы синхронизируются через Интернет</div>
-          <div class="bt-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span></div>
+          <div class="bt-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span><div class="bt-progress"><div class="bt-progress-fill" style="width:0%"></div></div><span>0/1</span></div>
         </div>
         <button class="collapse-btn" type="button" title="Свернуть/развернуть">▾</button>
       </div>
       <div class="bt-body">
         
         
-        <div class="subtasks"><div class="empty">Пока нет подзадач</div></div>
+        <div class="subtasks">
+    <div class="subtask " style="--bt-color:#dc2626">
+      <div class="st-top">
+        <div class="st-check">⬜</div>
+        <div style="flex:1;min-width:0">
+          <div class="st-title">Обе лампы синхронизируются через Интернет</div>
+          
+          <div class="st-meta"><span class="chip" style="background:#dc2626;color:#fff">веха</span></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
       </div>
     </div>
   
@@ -996,7 +1002,7 @@ footer{padding:14px;font-size:11px;color:var(--sub);text-align:center;}
   
 </div>
 
-<footer>Это статическая версия доски для чтения. Обновляется автоматически каждый день в 06:00 МСК.</footer>
+<footer>Это статическая версия доски для чтения. Обновляется автоматически каждый день.</footer>
 
 <script>
 document.querySelectorAll('.collapse-btn').forEach(btn=>{
